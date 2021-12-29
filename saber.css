@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+#sidebar {
+	min-width:100px;
+	margin:0 15px;
+	float:left;
+	line-height:140%;
+	background-color:#EEE;
+}
+
+#sidebar p {
+	padding:0 10px;
+}
