@@ -1,67 +1,128 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="GENERATOR" content="Arachnophilia 3.9">
 <meta name="description" content="Saber Jafarpour's research">
 <meta name="keywords" content="Saber Jafarpour, Research">
 <link href="saber.css" rel="stylesheet" media="screen" />
 <title>Research</title>
-</head>
 <style type="text/css">
-<!-- body {background-image: url('saberback2.png'); background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover; margin-top: 3%; margin-left: 15%; margin-right: 15%} h1 -->
-<!-- {font: 14pt Trebuchet MS; color: #0000FF} h2, h3, h4 {margin-left: -3%} -->
-<!-- p {font: 12pt Trebuchet MS} a {color: #0000FF; text-decoration: none} -->
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #f6f7f3;
+}
+
+html {
+  --site-content-width: min(92%, 1600px);
+}
+
+body {
+  width: var(--site-content-width);
+  max-width: none;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 3rem);
+  color: #242824;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+table, td, th, p, li, a, font {
+  font-family: inherit;
+}
+
+a {
+  color: #245b78;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #173d52;
+  text-decoration: underline;
+}
+
+.site-header {
+  margin-bottom: 0.75rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.65rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  background: #e7ebe5;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.25rem;
+  color: #245b78;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.site-nav a.active {
+  color: #fff;
+  background: #505750;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body > table {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 760px) {
+  body { font-size: 17px; }
+  .site-nav {
+    grid-template-columns: repeat(8, minmax(105px, 1fr));
+    overflow-x: auto;
+    font-size: 0.82rem;
+  }
+}
 </style>
-<table> 
-  <td> 
-    <left><Font Size="6"><b>Saber Jafarpour</b></Font></left><br>
-    <br>
-<left><Font Size="4">Research Assistant Professor</Font></left><br>
-<left><Font Size="4">Department of Computer Science</Font></left><br>
-<left><Font Size="4">University of Colorado Boulder</Font><br>
-    <left><Font Size="4">Email: </Font></left>
-</left><a href="mailto: saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu
-    </a><br><br>
-  </td>
-  </table>   
-
-<table style="width:100%" bgcolor="#E8E5E5">  
-  <tr>
-      <td style="width:10%" align="center"> <Font Size="4"><a
-  href="https://saberjafarpour.github.io/"> Home
-      </a>
-  </td>
-  <td style="width:10%" align="center" bgcolor="#505050"><Font Size="4"><a href="research.html" style="color:#FFFFFF">
-Research
-</a></td>
-  <td style="width:10%" align="center"><Font Size="4"><a href="publications.html">
-Publications
-  <td style="width:10%" align="center"><Font Size="4" color="red"><a href="teaching.html" >
-Teaching </font>
-</a></td> 
-  <td style="width:10%" align="center"><Font Size="4"><a href="talks.html" >
-Talks
-    </a></td>
-    </a></td>
-    <td style="width:10%" align="center"><Font Size="4" color="red"><a href="researchgroup.html" >
-Research Group </font>
-</a></td>
-<td style="width:10%" align="center"><Font Size="4">
-<a href="CV.pdf"> C.V.
-  </a></td>
-  <td style="width:10%" align="center"><Font Size="4">
-<a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&hl=en&oi=ao"> Google Scholar
-</a></td>
-  <!--   <td align="center"><Font Size="3"><a href="erdos.html" > -->
-<!-- ERD&OumlS NUMBER -->
-<!-- </a></td> -->
-</tr>
-</table>
-
+</head>
 <body>
+<header class="site-header">
+  <h1>Saber Jafarpour</h1>
+  <p>Research Assistant Professor</p>
+  <p>Department of Computer Science</p>
+  <p>University of Colorado Boulder</p>
+  <p>Email: <a href="mailto:saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu</a></p>
+</header>
+
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="index.html">Home</a>
+  <a class="active" href="research.html" aria-current="page">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="talks.html">Talks</a>
+  <a href="researchgroup.html">Research Group</a>
+  <a href="CV.pdf">C.V.</a>
+  <a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&amp;hl=en&amp;oi=ao"
+     target="_blank" rel="noopener noreferrer">Google Scholar</a>
+</nav>
 
 <br><br>
 <br>
@@ -83,7 +144,6 @@ My research is in the broad area of control theory and autonomy with
 </font>
   </td>
 
-</td>
 <td style="width:50%" align=left>
 <img src= "Research.png"
 align="Right"  Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="90%"

@@ -1,147 +1,340 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html> 
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="GENERATOR" content="Arachnophilia 3.9">
 <meta name="description" content="Saber Jafarpour">
 <meta name="keywords" content="Saber Jafarpour,Control theory,
 synchronization, Implicit neural networks, Reachability analysis">
 <link href="saber.css" rel="stylesheet" media="screen" />
 <title>Saber Jafarpour's Homepage</title>
-</head>
+
 
 <style type="text/css">
-<!-- body {background-image: url('saberback2.png');
-background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: cover; margin-top: 3%; margin-left: 14%; margin-right: 14%} h1 -->
-<!-- {font: 14pt Trebuchet MS; color: #0000FF} h2, h3, h4 {margin-left: -3%} -->
-<!-- p {font: 12pt Trebuchet MS} a {color: #0000FF; text-decoration: none} -->
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #f6f7f3;
+  --site-content-width: min(92%, 1600px);
+}
+
+body {
+  width: var(--site-content-width);
+  max-width: none;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 3rem);
+  color: #242824;
+  background: #f6f7f3;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+table, td, th, p, li, a, font {
+  font-family: inherit;
+}
+
+a {
+  color: #245b78;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #173d52;
+  text-decoration: underline;
+}
+
+.site-header {
+  margin-bottom: 0.75rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.65rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  background: #e7ebe5;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.25rem;
+  color: #245b78;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.site-nav a.active {
+  color: #fff;
+  background: #505750;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(220px, 0.8fr);
+  align-items: start;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin: 3rem 0 2.5rem;
+}
+
+.intro-text {
+  text-align: justify;
+}
+
+.intro-text p:first-child {
+  margin-top: 0;
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(36, 40, 36, 0.14);
+}
+
+.profile-links {
+  margin-top: 1.5rem;
+}
+
+.news-divider {
+  border: 0;
+  border-top: 1px solid #aeb8ad;
+  margin: 2.75rem 0 2.25rem;
+}
+
+.news-section {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.news-section h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.65rem;
+}
+
+.news-list {
+  margin: 0;
+  padding-left: 1.35rem;
+}
+
+.news-list > li {
+  margin-bottom: 1.15rem;
+}
+
+.paper-list {
+  margin-top: 0.45rem;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 17px;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    max-width: 260px;
+  }
+
+  .site-nav {
+    grid-template-columns: repeat(8, minmax(105px, 1fr));
+    overflow-x: auto;
+    font-size: 0.82rem;
+  }
+
+  .news-section {
+    width: 100%;
+  }
+}
 </style>
+</head>
 
+<body>
 
-<table> 
-  <td> 
-    <left><Font Size="6"><b>Saber Jafarpour</b></Font></left><br>
-    <br>
-<left><Font Size="4">Research Assistant Professor</Font></left><br>
-<left><Font Size="4">Department of Computer Science</Font></left><br>
-<left><Font Size="4">University of Colorado Boulder</Font><br>
-    <left><Font Size="4">Email: </Font></left>
-</left><a href="mailto: saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu
-    </a><br><br>
-  </td>
-  </table>  
+<header class="site-header">
+  <h1>Saber Jafarpour</h1>
+  <p>Research Assistant Professor</p>
+  <p>Department of Computer Science</p>
+  <p>University of Colorado Boulder</p>
+  <p>Email: <a href="mailto:saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu</a></p>
+</header>
 
-<table style="width:100%" bgcolor="#E8E5E5">  
-  <tr>
-      <td style="width:12%" align="center" bgcolor="#505050"> <Font Size="4"><a
-  href="https://saberjafarpour.github.io/" style="color:#FFFFFF"> Home
-      </a>
-  </td>
-  <td style="width:12%" align="center"><Font Size="4"><a href="research.html" >
-Research
-</a></td>
-  <td style="width:12%" align="center"><Font Size="4"><a href="publications.html" >
-Publications
-  <td style="width:10%" align="center"><Font Size="4" color="red"><a href="teaching.html" >
-Teaching </font>
-</a></td> 
-  <td style="width:12%" align="center"><Font Size="4"><a href="talks.html" >
-Talks
-    </a></td>
-    </a></td>
-    <td style="width:15%" align="center"><Font Size="4" color="red"><a href="researchgroup.html" >
-Research Group </font>
-</a></td>
-<td style="width:8%" align="center"><Font Size="4">
-<a href="CV.pdf"> C.V.
-  </a></td>
-  <td style="width:15%" align="center"><Font Size="4">
-<a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&hl=en&oi=ao"> Google Scholar
-</a></td>
-  <!--   <td align="center"><Font Size="3"><a href="erdos.html" > -->
-<!-- ERD&OumlS NUMBER -->
-<!-- </a></td> -->
-</tr>
-</table>
-<br>
-<br>
-<br>
+<nav class="site-nav" aria-label="Primary navigation">
+  <a class="active" href="index.html" aria-current="page">Home</a>
+  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="talks.html">Talks</a>
+  <a href="researchgroup.html">Research Group</a>
+  <a href="CV.pdf">C.V.</a>
+  <a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&amp;hl=en&amp;oi=ao"
+     target="_blank" rel="noopener noreferrer">Google Scholar</a>
+</nav>
+<section class="intro">
+  <div class="intro-text">
 
-<table style="width:100%" align="center">
-  <tr>
-  <td style="width:65%" valign="top" align="justify">
-    <Font Size="4" line-height="20px"> 
-
-  I am a Research Assistant Professor at the University of Colorado Boulder. Prior to this, I was a Postdoctoral Research Fellow at the Institute for Robotics and Intelligent Machines at the Georgia Institute of Technology, working with 
-  <a href="https://coogan.ece.gatech.edu" target="_blank">Sam Coogan</a>, and a Postdoctoral Research Fellow at the Center for Control, Dynamical Systems, and Computation at the University of California, Santa Barbara, working with 
-  <a href="http://motion.me.ucsb.edu" target="_blank">Francesco Bullo</a>. I completed my Ph.D. in the Department of Mathematics and Statistics at Queen's University under the supervision of 
+<p>
+  I am a Research Assistant Professor in the Department of Computer Science
+  at the University of Colorado Boulder. Before joining CU Boulder, I was a
+  Postdoctoral Research Fellow at the Institute for Robotics and Intelligent
+  Machines at the Georgia Institute of Technology, where I worked with
+  <a href="https://coogan.ece.gatech.edu" target="_blank">Sam Coogan</a>.
+  I previously held a postdoctoral research fellowship at the Center for
+  Control, Dynamical Systems, and Computation at the University of California,
+  Santa Barbara, where I worked with
+  <a href="http://motion.me.ucsb.edu" target="_blank">Francesco Bullo</a>.
+  I received my Ph.D. in Mathematics from Queen's University under the
+  supervision of
   <a href="http://www.mast.queensu.ca/~andrew" target="_blank">Andrew Lewis</a>.
+</p>
 
-
-  My research lies at the intersection of control theory and autonomy,
-  with applications to robotics and cyber-physical systems. More
-  specifically, I focus on the following research areas: 
-
+<p>
+  My research lies at the intersection of control theory and autonomous
+  systems, with applications to robotics and cyber-physical systems. My
+  primary research interests include:
+</p>
 
 <ul>
-  <li>Safety assurance of learning-enabled systems</li>
-  <li>Performance of optimization and learning algorithms</li>
+  <li>Safety assurance for learning-enabled systems</li>
+  <li>Performance analysis of optimization and learning algorithms</li>
   <li>Resilience of large-scale autonomous systems</li>
   <li>Geometric control of nonlinear systems</li>
 </ul>
 
 
-    <br>
+    <div class="profile-links">
     Links: <a
     href="https://www.scopus.com/authid/detail.uri?authorId=57191243132"
-    target ="_blank"> Scopus</a>,
+    target ="_blank" rel="noopener noreferrer">Scopus</a>,
     <a
     href="https://ieeexplore.ieee.org/author/37085531751"
-    target ="_blank"> IEEE Xplore,</a>
-    <br>
-     Orcid ID:<a
-    href="https://orcid.org/0000-0002-7614-2940"
-    target ="_blank"> 0000-0002-7614-2940</a>,
-    </font>
-  </td>
+    target ="_blank" rel="noopener noreferrer">IEEE Xplore</a><br>
+    ORCID ID:
+    <a href="https://orcid.org/0000-0002-7614-2940"
+    target ="_blank" rel="noopener noreferrer">0000-0002-7614-2940</a>
+    </div>
+  </div>
 
-<td style="width:25%" align="top">
-<img src="my_photo4.jpg"
-align="Right"  Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="70%"
-width="70%">
-</td>
-  
-</table>
-<br>
-<br>
+  <div>
+    <img class="profile-photo" src="my_photo4.jpg" alt="Portrait of Saber Jafarpour">
+  </div>
+</section>
 
-<table style="width:85%" align="center">
-  <td valign="top" align="justify">
-    <Font Size="3" line-height="20px">
+<hr class="news-divider">
 
-    <font size="5"><b>News:</b></font>
+<section class="news-section">
+  <h2>News</h2>
+  <ul class="news-list">
 
-    <br>
-    <br>
+<li>July 2026: Two papers were accepted for presentation at the
+    <a href="https://cdc2026.ieeecss.org" target="_blank"
+    rel="noopener noreferrer">IEEE Conference on Decision and Control (CDC 2026)</a>
+    in Honolulu, Hawaii:
+    <ul class="paper-list">
+      <li><i>Data-Driven Compositional Safety Verification of Interconnected Monotone Systems</i></li>
+      <li><i>Monotone Embedding for Hierarchical Control of Linear Systems with Disturbances</i></li>
+    </ul>
+</li>
 
+<li>July 2026: I gave an invited talk titled
+    <i>Data-Driven Detection and Localization of Critical Transitions in Nonlinear Networks</i>
+    at the workshop
+    <a href="https://giordanogiulia.altervista.org/robustness-resilience-earlywarningsignals-workshop/"
+    target="_blank" rel="noopener noreferrer">Robustness, Resilience, and Early Warnings in
+    Natural Dynamical Networks</a> during the
+    <a href="https://ecc26.euca-ecc.org/" target="_blank"
+    rel="noopener noreferrer">European Control Conference (ECC 2026)</a>
+    in Reykjavík, Iceland.
+</li>
 
-<li> July 2025: Two papers accepted to <a
-href="https://cdc2025.ieeecss.org"
-target = "_blank"><u> IEEE CDC 2025</u></a>!
-    <br> <br>    
+<li>July 2026: Our manuscript
+    <a href="https://arxiv.org/abs/2607.05599" target="_blank"
+    rel="noopener noreferrer"><i>Reachability Analysis for Power Systems with
+    Heterogeneous Resources via Jordan Transformation</i></a>
+    is now available on arXiv. This is joint work with
+    <a href="https://cse.umn.edu/ece/sairaj-dhople" target="_blank"
+    rel="noopener noreferrer">Sairaj Dhople</a> and
+    <a href="https://emilianoda.github.io/" target="_blank"
+    rel="noopener noreferrer">Emiliano Dall'Anese</a>.
+</li>
+
+<li>Felipe Galarza-Jimenez successfully defended his Ph.D. thesis,
+    <i>Scalable Verification and Control Synthesis for Large-Scale Systems</i>.
+</li>
+
+<li>May 2026: Our project
+    <a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2534982"
+    target="_blank" rel="noopener noreferrer"><i>Reachability Analysis for
+    Nonlinear Cyber-Physical Systems</i></a> was awarded funding by the
+    <a href="https://www.nsf.gov/funding/opportunities/cps-cyber-physical-system-foundations-connected-communities"
+    target="_blank" rel="noopener noreferrer">NSF Cyber-Physical Systems
+    program</a>. Sriram Sankaranarayanan is the PI, and I serve as Co-PI.
+</li>
+
+<li>April 2026: Our manuscript
+    <a href="https://arxiv.org/abs/2605.16660" target="_blank"
+    rel="noopener noreferrer"><i>Trajectory-Based Safety of Monotone Systems:
+    Verification and Control Synthesis</i></a> is available on arXiv.
+</li>
+
+<li>April 2026: Our paper <i>Data-Driven Controlled Invariance via Monotone
+    Embeddings</i> was accepted for presentation at the 2026 IFAC World
+    Congress in Busan, Korea.
+</li>
+
+<li>July 2025: I gave an invited talk titled
+    <a href="https://saberjafarpour.github.io/ACCinvited.pdf" target="_blank"
+    rel="noopener noreferrer"><i>Safety Assurance in Neural Network Controlled
+    Systems: A Mixed Monotone Approach</i></a> at the Workshop on Formal Methods
+    for Systems with Neural Components during the 2025 American Control
+    Conference in Denver.
+</li>
+
+<li>July 2025: Two papers were accepted for presentation at
+    <a href="https://cdc2025.ieeecss.org" target="_blank"
+    rel="noopener noreferrer">IEEE CDC 2025</a>:
+    <ul class="paper-list">
+      <li><a href="https://ieeexplore.ieee.org/abstract/document/11036788/"
+      target="_blank" rel="noopener noreferrer"><i>Neural Barrier Certificates
+      for Monotone Systems</i></a></li>
+      <li><a href="https://ieeexplore.ieee.org/abstract/document/11312124"
+      target="_blank" rel="noopener noreferrer"><i>Trajectory-Based Barrier
+      Certificates for Monotone Systems</i></a></li>
+    </ul>
+</li>
 
 <li> May 2025: Our paper <a
 href="https://ieeexplore.ieee.org/document/11036788"
-target = "_blank"><u> Neural Barrier Certificates for Monotone Systems
-    </u></a> is accepted
+target = "_blank"><i> Neural Barrier Certificates for Monotone Systems
+    </i></a> is accepted
 for publication in <i>IEEE Control Systems Letters</i>!
     <br> <br>
 
    <li> April 2025: Our preprint <a
 href="https://arxiv.org/abs/2503.03328"
-target = "_blank"><u>Safety Verification of Nonlinear Stochastic Systems via Probabilistic Tube</u></a> is available on arXiv!  (Joint work with
+target = "_blank"><i>Safety Verification of Nonlinear Stochastic Systems via Probabilistic Tube</i></a> is available on arXiv!  (Joint work with
     Zishun Liu and <a
 href="https://yongxin.ae.gatech.edu/index.html"
 target = "_blank"> Yongxin Chen</a>) 
@@ -151,8 +344,8 @@ target = "_blank"> Yongxin Chen</a>)
 
 <li> April 2025: Our paper <a
 href="https://arxiv.org/abs/2407.12225"
-target = "_blank"><u>Probabilistic Reachability Analysis of Stochastic Control Systems
-    </u></a> is accepted
+target = "_blank"><i>Probabilistic Reachability Analysis of Stochastic Control Systems
+    </i></a> is accepted
 for publication in <i> IEEE Transactions on Automatic Control</i>! (Joint work with
     Zishun Liu and <a
 href="https://yongxin.ae.gatech.edu/index.html"
@@ -162,15 +355,15 @@ target = "_blank"> Yongxin Chen</a>)
 
     <li> Feb. 2025: Our preprint <a
 href="https://arxiv.org/abs/2502.20878"
-target = "_blank"><u>Geometric Reachability for Attitude Control Systems via Contraction Theory</u></a> is available on arXiv! 
+target = "_blank"><i>Geometric Reachability for Attitude Control Systems via Contraction Theory</i></a> is available on arXiv! 
 
        <br> <br>
     
 
     <li> Dec. 2024: Our paper <a
 href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10801247"
-target = "_blank"><u> Safety Verification of Stochastic Systems: A Set-Erosion Approach
-    </u></a> is accepted
+target = "_blank"><i> Safety Verification of Stochastic Systems: A Set-Erosion Approach
+    </i></a> is accepted
 for publication in <i>IEEE Control Systems Letters</i>! (Joint work with
     Zishun Liu and <a
 href="https://yongxin.ae.gatech.edu/index.html"
@@ -188,9 +381,9 @@ target = "_blank"> Yongxin Chen</a>)
 
     <br> <br>
 
-    <li> July 2024: I am co-organizing the workshop <u><a
+    <li> July 2024: I am co-organizing the workshop <i><a
     href="https://lavaei-cps.de/workshop-CDC2024.html"> From Formal
-    Methods to Data-Driven Verification and Control</a></u> during <a
+    Methods to Data-Driven Verification and Control</a></i> during <a
     href="https://cdc2024.ieeecss.org"> CDC
     2024</a> in Milan on December 15th (other organizers: Abolfazl
     Lavaei, Lars Lindemann, and Chuchu Fan). 
@@ -203,25 +396,25 @@ target = "_blank"> Yongxin Chen</a>)
 
     <li> Sept. 2024: Our paper <a
 href="https://arxiv.org/pdf/2210.11576"
-target = "_blank"><u> Monotonicity and contraction on polyhedral cones
-    </u></a> is accepted
+target = "_blank"><i> Monotonicity and contraction on polyhedral cones
+    </i></a> is accepted
 for publication in <i> IEEE Transactions on Automatic Control </i>!
        <br> <br>
 
     <li> Aug. 2024: Our paper <a
 href="https://arxiv.org/pdf/2307.14938"
-target = "_blank"><u>Efficient Interaction-Aware Interval Analysis of
-    Neural Network Feedback Loops</u></a> is accepted for publication
+target = "_blank"><i>Efficient Interaction-Aware Interval Analysis of
+    Neural Network Feedback Loops</i></a> is accepted for publication
     in <i> IEEE Transactions on Automatic Control </i>!
 
        <br> <br>
 
 
 
-    <li> July 2024: Our paper <u><a
+    <li> July 2024: Our paper <i><a
 href="https://ieeexplore.ieee.org/document/10354048"
 target =  "_blank">
-    Forward Invariance in Neural Network Controlled Systems </a></u>
+    Forward Invariance in Neural Network Controlled Systems </a></i>
     is accepted for publications in <i> IEEE Control Systems Letters </i>!
 
     <br> <br>
@@ -231,18 +424,18 @@ target =  "_blank">
 
     <br> <br>
 
-    <li> July 2023: Our paper <u><a
+    <li> July 2023: Our paper <i><a
 href="https://arxiv.org/pdf/2309.09146.pdf"
 target =  "_blank"> A contracting dynamical system
-    perspective toward interval markov decision processes </a></u> is accepted
+    perspective toward interval markov decision processes </a></i> is accepted
     for presentation at <i>62th IEEE Conference on Decision and Control</i>
     in Marina Bay Sands, Singapore!
 
     <br> <br>
 
-    <li> July 2023: Our paper <u><a
+    <li> July 2023: Our paper <i><a
 href="https://arxiv.org/abs/2304.03671"
-target = "_blank">Contraction-guided adaptive partitioning for reachability analysis of neural network controlled systems</a></u> is accepted
+target = "_blank">Contraction-guided adaptive partitioning for reachability analysis of neural network controlled systems</a></i> is accepted
     for presentation at <i> 62th IEEE Conference on Decision and Control </i>
     in Marina Bay Sands, Singapore!
 
@@ -251,8 +444,8 @@ target = "_blank">Contraction-guided adaptive partitioning for reachability anal
 
     <li> Mar. 2023: Our paper <a
 href="https://arxiv.org/abs/2301.07912"
-target = "_blank"><u>Interval Reachability of Nonlinear Dynamical
-    Systems with Neural Network Controllers</u></a> is accepted
+target = "_blank"><i>Interval Reachability of Nonlinear Dynamical
+    Systems with Neural Network Controllers</i></a> is accepted
  for presentation at <i><a href="https://l4dc.seas.upenn.edu"> 5th Annual Learning for Dynamics
  and Control Conference</a></i> (L4DC)!
 
@@ -260,92 +453,92 @@ target = "_blank"><u>Interval Reachability of Nonlinear Dynamical
 
 
 
-<li> Aug. 2022: Our paper <u><a
+<li> Aug. 2022: Our paper <i><a
 href="https://arxiv.org/abs/2204.00187"
 target = "_blank"> Comparative Analysis of Interval Reachability for
-Robust Implicit and Feedforward Neural Networks</a></u> is accepted
+Robust Implicit and Feedforward Neural Networks</a></i> is accepted
     for presentation at <i> 61th IEEE Conference on Decision and Control</i>
     in Cancun, Mexico!
 
      <br> <br>
 
 
-<li> Aug. 2022: Our paper <u><a
+<li> Aug. 2022: Our paper <i><a
 href="https://arxiv.org/abs/2204.01877"
 target = "_blank"> Non-Euclidean Monotone Operator Theory with
-    Applications to Recurrent Neural Networks </a></u> is accepted
+    Applications to Recurrent Neural Networks </a></i> is accepted
     for presentation at <i> 61th IEEE Conference on Decision and Control</i>
     in Cancun, Mexico!
 
      <br> <br>
 
-<li> Jun. 2022: Our paper <u><a
+<li> Jun. 2022: Our paper <i><a
 href="https://arxiv.org/abs/2208.03889"
 target = "_blank"> Robust Training and Verification of Implicit Neural
-    Networks: a non-Euclidean Contractive Approach</a></u> is accepted
+    Networks: a non-Euclidean Contractive Approach</a></i> is accepted
     for poster presentation at the <i>ICML workshop on Formal
     Verification of Machine Learning (WFVML 2022)</i> in Baltimore, Maryland!    
 
      <br> <br>
 
-<li> Mar. 2022: Our work <u><a href="https://arxiv.org/abs/2112.05310"
+<li> Mar. 2022: Our work <i><a href="https://arxiv.org/abs/2112.05310"
  target = "_blank"> Robustness Certificates for Implicit Neural
- Networks: A Mixed Monotone Contractive Approach</a></u> is accepted
+ Networks: A Mixed Monotone Contractive Approach</a></i> is accepted
  for presentation
  at <i><a href="https://l4dc.stanford.edu"> 4th Learning for Dynamics
  and Control Conference</a></i> (<b>Oral Presentation: Top 10 precent
  of submitted papers</b>)  <br> <br>
 
-  <li> Jan. 2022: Our work <u><a
+  <li> Jan. 2022: Our work <i><a
   href="https://arxiv.org/abs/2203.07555"
   target = "_blank"> Resilience of Input Metering in Dynamic Flow
-  Networks</a></u> is accepted for presentation at <i><a
+  Networks</a></i> is accepted for presentation at <i><a
   href="https://acc2022.a2c2.org"> 2022 American Control Conference
   </a></i> (ACC) in Atlanta! <br> <br>
 
 
 
-  <li> Sep. 2021: Our paper <u><a
+  <li> Sep. 2021: Our paper <i><a
   href="https://openreview.net/forum?id=SwfsoPuGYku" target = "_blank">
-  Robust Implicit Networks via Non-Euclidean Contractions</a></u> is
+  Robust Implicit Networks via Non-Euclidean Contractions</a></i> is
   accepted in <i>NeurIPS 2021</i>!.  <br> <br>
 
-  <li> July 2021: Our paper <u><a
+  <li> July 2021: Our paper <i><a
 href="https://arxiv.org/abs/2003.12665" target = "_blank"> Distributed
 and Time-Varying Primal-Dual Dynamics via Contraction
-Analysis</a></u>, is accepted for publication in <i>IEEE Transactions on
+Analysis</a></i>, is accepted for publication in <i>IEEE Transactions on
 Automatic Control</i>!
 
 <br>
 <br>
-<li> July 2021: Our paper <u><a href="https://arxiv.org/abs/2110.03623" target = "_blank">
+<li> July 2021: Our paper <i><a href="https://arxiv.org/abs/2110.03623" target = "_blank">
  From Contraction Theory to Fixed Point Algorithms on Riemannian and
-non-Euclidean Spaces</a></u>, is accepted for presentation at <i> 60th
+non-Euclidean Spaces</a></i>, is accepted for presentation at <i> 60th
 IEEE Conference on Decision and Control </i>, Austin, Texas, USA!
 <br>
 <br>
-<li> Apr. 2021: We posted two manuscripts on arXiv: <u><a href="https://arxiv.org/pdf/2103.12263.pdf" target = "_blank">
-  Non-Euclidean Contraction Theory for Robust Nonlinear Stability</a></u> and <u><a href="https://arxiv.org/pdf/2104.01321.pdf" target = "_blank">
-  Non-Euclidean Contraction Theory for Monotone and Positive Systems</a></u>.
+<li> Apr. 2021: We posted two manuscripts on arXiv: <i><a href="https://arxiv.org/pdf/2103.12263.pdf" target = "_blank">
+  Non-Euclidean Contraction Theory for Robust Nonlinear Stability</a></i> and <i><a href="https://arxiv.org/pdf/2104.01321.pdf" target = "_blank">
+  Non-Euclidean Contraction Theory for Monotone and Positive Systems</a></i>.
 <br>
 <br>
-<li> Apr. 2021: Our paper <u><a href="https://arxiv.org/pdf/1901.11189.pdf" target = "_blank">
+<li> Apr. 2021: Our paper <i><a href="https://arxiv.org/pdf/1901.11189.pdf" target = "_blank">
   Flow and Elastic Networks on the n-Torus: Geometry, Analysis and
-Computation</a></u>, is accepted for publication in <i>SIAM Review
+Computation</a></i>, is accepted for publication in <i>SIAM Review
 (Research Spotlight) </i>. 
 <br>
 <br>
-<li> Mar. 2021: Our paper <u><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9442883" target = "_blank">
-  Singular Perturbation and Small-signal Stability for Inverter Networks</a></u>, is accepted for publication in <i>IEEE Transactions on Control of
+<li> Mar. 2021: Our paper <i><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9442883" target = "_blank">
+  Singular Perturbation and Small-signal Stability for Inverter Networks</a></i>, is accepted for publication in <i>IEEE Transactions on Control of
 Network Systems </i>!  
 <br>
 <br>
-<li> Mar. 2021: Our paper <u><a href="https://arxiv.org/abs/2005.09774" target = "_blank">
+<li> Mar. 2021: Our paper <i><a href="https://arxiv.org/abs/2005.09774" target = "_blank">
  Weak and Semi-Contraction for Network Systems and Diffusively-Coupled
-Oscillators</a></u>, is accepted for publication in <i>IEEE Transactions on Automatic Control</i>.
+Oscillators</a></i>, is accepted for publication in <i>IEEE Transactions on Automatic Control</i>.
 
-</font>
-</table>
+</ul>
+</section>
 
 
 

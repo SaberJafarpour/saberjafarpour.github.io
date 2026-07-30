@@ -1,81 +1,194 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset="utf-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="GENERATOR" content="Arachnophilia 3.9">
 <meta name="description" content="Saber Jafarpour's Publication">
 <meta name="keywords" content="Saber Jafarpour,Control theory,Control,
 Controllability, Geometric Mechanics, Publications, papers">
+<link href="saber.css" rel="stylesheet" media="screen">
 <title>Publications</title>
-</head> 
+<style>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+html, body {
+  background: #f6f7f3;
+}
 
+html {
+  --site-content-width: min(92%, 1600px);
+}
 
-<style type="text/css">
-<!-- body {background-image: url('saberback2.png'); background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: cover; margin-top: 3%; margin-left: 15%; margin-right: 15%} h1 -->
-<!-- {font: 14pt Trebuchet MS; color: #0000FF} h2, h3, h4 {margin-left: -3%} -->
-<!-- p {font: 12pt Trebuchet MS} a {color: #0000FF; text-decoration: none} -->
+body {
+  width: var(--site-content-width);
+  max-width: none;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 3rem);
+  color: #242824;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+table, td, th, p, li, a, font {
+  font-family: inherit;
+}
+
+a {
+  color: #245b78;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #173d52;
+  text-decoration: underline;
+}
+
+.site-header {
+  margin-bottom: 0.75rem;
+}
+
+.site-header h1 {
+  margin: 0 0 0.65rem;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 0;
+}
+
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  background: #e7ebe5;
+}
+
+.site-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.25rem;
+  color: #245b78;
+  text-align: center;
+  line-height: 1.25;
+}
+
+.site-nav a.active {
+  color: #fff;
+  background: #505750;
+}
+
+.page-content {
+  margin: 3rem auto 0;
+  width: 100%;
+  max-width: none;
+}
+
+.page-content h2 {
+  margin: 2.5rem 0 1.25rem;
+  font-size: 1.65rem;
+  line-height: 1.3;
+}
+
+.page-content h2:first-child {
+  margin-top: 0;
+}
+
+.page-content h3 {
+  margin: 2.25rem 0 1rem;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.representative-papers {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 1rem 0.5rem;
+}
+
+.representative-papers td {
+  width: 25%;
+  vertical-align: top;
+}
+
+.representative-papers img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.publication-intro {
+  max-width: none;
+}
+
+.publication-list {
+  margin: 0;
+  padding-left: 2.25rem;
+}
+
+.publication-list li {
+  margin-bottom: 1.1rem;
+  padding-left: 0.25rem;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-nav {
+    grid-template-columns: repeat(8, minmax(105px, 1fr));
+    overflow-x: auto;
+    font-size: 0.82rem;
+  }
+
+  .page-content {
+    margin-top: 2rem;
+  }
+
+  .representative-papers {
+    display: block;
+    overflow-x: auto;
+    min-width: 760px;
+  }
+}
 </style>
+</head>
+<body>
+<header class="site-header">
+  <h1>Saber Jafarpour</h1>
+  <p>Research Assistant Professor</p>
+  <p>Department of Computer Science</p>
+  <p>University of Colorado Boulder</p>
+  <p>Email: <a href="mailto:saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu</a></p>
+</header>
+
+<nav class="site-nav" aria-label="Primary navigation">
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a class="active" href="publications.html" aria-current="page">Publications</a>
+  <a href="teaching.html">Teaching</a>
+  <a href="talks.html">Talks</a>
+  <a href="researchgroup.html">Research Group</a>
+  <a href="CV.pdf">C.V.</a>
+  <a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&amp;hl=en&amp;oi=ao"
+     target="_blank" rel="noopener noreferrer">Google Scholar</a>
+</nav>
+
+<main class="page-content">
+<h2>Representative Papers</h2>
 
 
-<table> 
-  <td> 
-    <left><Font Size="6"><b>Saber Jafarpour</b></Font></left><br>
-    <br>
-<left><Font Size="4">Research Assistant Professor</Font></left><br>
-<left><Font Size="4">Department of Computer Science</Font></left><br>
-<left><Font Size="4">University of Colorado Boulder</Font><br>
-    <left><Font Size="4">Email: </Font></left>
-</left><a href="mailto: saber.jafarpour@colorado.edu">saber.jafarpour@colorado.edu
-    </a><br><br>
-  </td>
-  </table>  
-
-<table style="width:100%" bgcolor="#E8E5E5">  
-  <tr>
-      <td style="width:10%" align="center"> <Font Size="4"><a
-  href="https://saberjafarpour.github.io/"> Home
-      </a>
-  </td>
-  <td style="width:10%" align="center"><Font Size="4"><a href="research.html" >
-Research
-</a></td>
-  <td style="width:10%" align="center" bgcolor="#505050"><Font Size="4"><a href="publications.html" style="color:#FFFFFF">
-Publications
-  <td style="width:10%" align="center"><Font Size="4" color="red"><a href="teaching.html" >
-Teaching </font>
-</a></td> 
-  <td style="width:10%" align="center"><Font Size="4"><a href="talks.html" >
-Talks
-    </a></td>
-    </a></td>
-    <td style="width:10%" align="center"><Font Size="4" color="red"><a href="researchgroup.html" >
-Research Group </font>
-</a></td>
-<td style="width:10%" align="center"><Font Size="4">
-<a href="CV.pdf"> C.V.
-  </a></td>
-  <td style="width:10%" align="center"><Font Size="4">
-<a href="https://scholar.google.com/citations?user=wohjRaQAAAAJ&hl=en&oi=ao"> Google Scholar
-</a></td>
-  <!--   <td align="center"><Font Size="3"><a href="erdos.html" > -->
-<!-- ERD&OumlS NUMBER -->
-<!-- </a></td> -->
-</tr>
-</table>
-<br>
-<br>
-<br>
-
-     <Font size="5">
-    <b>Representative Papers:</b>
-<br>
-<br>
-
-
-<table WIDTH="100%" border=0>
+<table class="representative-papers">
 
 <tr>
    <td WIDTH="25%">
@@ -211,60 +324,70 @@ href="https://epubs.siam.org/doi/10.1137/18M1242056">(pdf)</a>
 <br>
 <br>
 
- <Font size="5">
-    <b>Selected Research Papers:</b>
-<br>
-<br>
+<h2>Selected Research Papers</h2>
 
-<table style="width:85%" align="center">
-  <td valign="top" width=400 align="justify">
-    <font size="4">
+<div class="publication-content">
+    <p class="publication-intro">
     The following papers are in reverse chronological order. For most of them,
     I have also included the arXiv version 
     which might be slightly different from the published version. The asterisk *
     means these authors contributed equally. 
-    <br>
-    <br></font>
+    </p>
 
 
 
-<font size="5"><b>Under review papers:</b></font>
-<font size="3">
-    <ol reversed>
+<h3>Under Review Papers</h3>
+    <ol class="publication-list" reversed>
 
-      <li> A. Nadali, A. Trivedi, M. Zamani, and S. Jafarpour, <b>Monotone Neural Barrier Certificates, </b>
-      <i>Submitted,</i> May. 2024. <br> <br>
+      <li>A. Alavi, M. Zamani, and S. Jafarpour,
+      <b>Scalable Neural Safety Certification via Monotonicity,</b>
+      <i>Submitted,</i> July 2026.
 
-      <li> Z. Liu, S. Jafarpour, and Y. Chen, <b>Safety Verification of Nonlinear Stochastic Systems via Probabilistic Tube, </b>
-      <i>Submitted,</i> April. 2025.  [<a
-      href="https://arxiv.org/pdf/2503.03328">arXiv</a>]  <br> <br>
+      <li>F. Mafi, S. Jafarpour, and M. Pirani,
+      <b>A Separation Principle for Adversarial Attacks and Defense of Graph
+      Neural Networks,</b> <i>Submitted,</i> July 2026.
 
+      <li>D. Ajeyemi, A. Colot, S. Dhople, E. Dall'Anese, and
+      S. Jafarpour, <b>Reachability Analysis for Power Systems with
+      Heterogeneous Resources via Jordan Transformation,</b>
+      <i>Preprint,</i> July 2026.
+      [<a href="https://arxiv.org/abs/2607.05599">arXiv</a>]
 
-
-      
-      <li> F. Galarza-Jimenez, M. Zamani, and
-      S. Jafarpour, <b>Trajectory-based Barrier Certificates for
-Monotone Systems, </b>
-      <i>Submitted,</i> March. 2025. <br> <br>
+      <li>F. Galarza-Jimenez, M. Zamani, and S. Jafarpour,
+      <b>Trajectory-Based Safety of Monotone Systems: Verification and
+      Control Synthesis,</b> <i>Preprint,</i> May 2026.
+      [<a href="https://arxiv.org/abs/2605.16660">arXiv</a>]
 
        <li> C. Xu, S. Jafarpour, C. Zhao, Z. Shi, and J. Chen, <b>Geometric Reachability for Attitude Control
 Systems via Contraction Theory, </b>
       <i>Submitted,</i> Feb. 2025. [<a
       href="https://arxiv.org/abs/2502.20878">arXiv</a>] <br> <br> 
-      
-
-      <li> Z. Liu, S. Jafarpour, and Y. Chen, <b>Probabilistic
-      Reachability of Discrete-time Nonlinear Stochastic System, </b>
-      <i>Submitted,</i> Aug. 2024. <br> <br>
 
        
     </ol>
-</font>
 
     
-    <font size="5"><b>Journal/CS-conference papers:</b></font>
- <font size="3">
-    <ol reversed>
+<h3>Journal/CS-Conference Papers</h3>
+    <ol class="publication-list" reversed>
+
+      <li>Z. Liu, S. Jafarpour, and Y. Chen,
+      <b>Safety Verification of Nonlinear Stochastic Systems via
+      Probabilistic Tube,</b>
+      <i>IEEE Transactions on Automatic Control</i>, 2026.
+      [<a href="https://doi.org/10.1109/TAC.2026.3670756">Journal Version</a>]
+      [<a href="https://arxiv.org/abs/2503.03328">arXiv</a>]
+
+      <li>Z. Liu, S. Jafarpour, and Y. Chen,
+      <b>Probabilistic Reachability of Discrete-Time Nonlinear Stochastic
+      Systems,</b>
+      <i>Automatica</i>, 190:113063, 2026.
+      [<a href="https://doi.org/10.1016/j.automatica.2026.113063">Journal Version</a>]
+      [<a href="https://arxiv.org/abs/2409.09334">arXiv</a>]
+
+      <li>A. Nadali, A. Trivedi, M. Zamani, and S. Jafarpour,
+      <b>Monotone Neural Barrier Certificates,</b>
+      <i>IEEE Control Systems Letters</i>, 2025.
+      [<a href="https://arxiv.org/abs/2508.12178">arXiv</a>]
 
       <li> S. Jafarpour*, Z. Liu*, and Y. Chen, <b>Probabilistic
       Reachability Analysis of Stochastic Control Systems, </b>
@@ -446,17 +569,32 @@ version</a>] <br> <br>
 
 <li> S. Jafarpour and A. D. Lewis, <b>Locally Convex Topologies and
 Control Theory,</b> <i>Mathematics of Control, Signals and
-Systems</i>, 28(4):1-46, 2016. [<a
-HREF="http://dx.doi.org/10.1007/s00498-016-0179-0">Journal
+Systems</i>, 28(4):1-46, 2016. [<a HREF="https://dx.doi.org/10.1007/s00498-016-0179-0">Journal
 version</a>] <br> <br>
 
 
 </ol>
-</font>
 
-<font Size="5"><b>Refereed Conference papers:</b></font>
-<font Size="3"> 
-<ol reversed>
+<h3>Refereed Conference Papers</h3>
+<ol class="publication-list" reversed>
+
+  <li>S. Jafarpour et al., <b>Data-Driven Compositional Safety
+      Verification of Interconnected Monotone Systems,</b>
+      <i>65th IEEE Conference on Decision and Control (CDC)</i>,
+      Honolulu, Hawaii, 2026.
+
+  <li>S. Jafarpour et al., <b>Monotone Embedding for Hierarchical
+      Control of Linear Systems with Disturbances,</b>
+      <i>65th IEEE Conference on Decision and Control (CDC)</i>,
+      Honolulu, Hawaii, 2026.
+
+  <li>A. Makdesi, M. Zamani, and S. Jafarpour,
+      <b>Data-Driven Controlled Invariance via Monotone Embeddings,</b>
+      <i>23rd IFAC World Congress</i>, Busan, Korea, 2026.
+
+  <li>F. Galarza-Jimenez, M. Zamani, and S. Jafarpour,
+      <b>Trajectory-Based Barrier Certificates for Monotone Systems,</b>
+      <i>64th IEEE Conference on Decision and Control (CDC)</i>, 2025.
 
   <li>S. Jafarpour and S. Coogan, <b>A contracting dynamical system perspective toward interval Markov decision processes,</b>
       <i>62nd IEEE Conference on Decision and Control (CDC)</i>, to appear,
@@ -555,17 +693,14 @@ Robust Implicit and Feedforward Neural Networks,</b>
   version</a>]
 
 </ol>
-</font>
 
 
-<font Size="5"><b>Books and Preprints:</b></font>
-<font Size="3">
-<ol reversed>
+<h3>Books and Preprints</h3>
+<ol class="publication-list" reversed>
  <li> S. Jafarpour and A. D. Lewis, <b>Time-varying Vector Fields and
 Their Flows,</b> <em>SpringerBriefs in Mathematics</em>,
 Springer-Verlag, 2014, ISBN 978-3-319-10139-2. [<a
-href="time_varying.pdf">Pdf</a>] [<A
-HREF="http://dx.doi.org/10.1007/978-3-319-10139-2">Springer
+href="time_varying.pdf">Pdf</a>] [<A HREF="https://dx.doi.org/10.1007/978-3-319-10139-2">Springer
 version</A>] <br> <br>
 
 <li> S. Jafarpour, <b>Local and Global Holomorphic Extensions of
@@ -578,20 +713,15 @@ version</A>] <br> <br>
   2014. [<a href="Lie_groupoids.pdf">Pdf</a>]
 
 </ol>
-</font>
   
-<font Size="5"><b>PhD Thesis</b></font>
-<font Size="3">
+<h3>Ph.D. Thesis</h3>
 <ol> <li> <b> On the Role of
   Regularity in Mathematical Control Theory </b>, PhD Thesis, Queen's
   University, Mar. 2016. [<a href="Thesis.pdf">Pdf</a>] [<a
-  href="Thesis_slides.pdf">Slides</a>]</font>
+  href="Thesis_slides.pdf">Slides</a>]
     
   </ol>
-</font>
-  </table>
-
-
+</div>
+</main>
 </body>
-
-  </html>
+</html>
