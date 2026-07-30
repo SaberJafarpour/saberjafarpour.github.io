@@ -103,14 +103,41 @@
     }
 
     @media (max-width: 760px) {
+      html {
+        --site-content-width: 100%;
+      }
+
       body {
-        font-size: 17px;
+        width: 100%;
+        padding: 1rem;
+        overflow-x: hidden;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .site-header h1 {
+        font-size: 1.75rem;
+      }
+
+      a,
+      p,
+      li {
+        overflow-wrap: anywhere;
       }
 
       .site-nav {
-        grid-template-columns: repeat(8, minmax(105px, 1fr));
-        overflow-x: auto;
-        font-size: 0.82rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        overflow: visible;
+        font-size: 0.88rem;
+      }
+
+      .site-nav a {
+        min-width: 0;
+        padding: 0.65rem 0.35rem;
+      }
+
+      .talk-list {
+        padding-left: 1.35rem;
       }
 
       .page-content {

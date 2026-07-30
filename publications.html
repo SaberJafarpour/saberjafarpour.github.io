@@ -109,14 +109,13 @@ a:focus {
 
 .representative-papers {
   width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.representative-papers td {
-  width: 25%;
-  vertical-align: top;
+.representative-paper {
+  min-width: 0;
 }
 
 .representative-papers img {
@@ -149,14 +148,38 @@ a:focus {
 }
 
 @media (max-width: 760px) {
+  html {
+    --site-content-width: 100%;
+  }
+
   body {
-    font-size: 17px;
+    width: 100%;
+    padding: 1rem;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .site-header h1 {
+    font-size: 1.75rem;
+  }
+
+  a,
+  p,
+  li,
+  small {
+    overflow-wrap: anywhere;
   }
 
   .site-nav {
-    grid-template-columns: repeat(8, minmax(105px, 1fr));
-    overflow-x: auto;
-    font-size: 0.82rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow: visible;
+    font-size: 0.88rem;
+  }
+
+  .site-nav a {
+    min-width: 0;
+    padding: 0.65rem 0.35rem;
   }
 
   .page-content {
@@ -164,9 +187,17 @@ a:focus {
   }
 
   .representative-papers {
-    display: block;
-    overflow-x: auto;
-    min-width: 760px;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .representative-papers img {
+    height: auto;
+    max-height: 240px;
+  }
+
+  .publication-list {
+    padding-left: 1.35rem;
   }
 }
 </style>
@@ -196,53 +227,40 @@ a:focus {
 <h2>Representative Papers</h2>
 
 
-<table class="representative-papers">
-
-<tr>
-   <td WIDTH="25%">
+<div class="representative-papers">
+  <article class="representative-paper">
       <a href="https://ieeexplore.ieee.org/document/10578313">
        <img style='border:1px solid #000000' alt="neuralnetwork" src="neuralnet.png" height=200  border="1">
-  </a></td> 
+      </a>
+      <small>Efficient Interaction-aware Interval Analysis for Neural
+      Network Feedback Loops, <em>TAC,</em> 2024,
+      <a href="https://ieeexplore.ieee.org/document/10578313">(pdf)</a></small>
+  </article>
 
-   <td WIDTH="25%">
+  <article class="representative-paper">
       <a href="https://arxiv.org/abs/2106.03194">
        <img style='border:1px solid #000000' alt="NeurIPS" src="NeurIPS.jpg" height=200  border="1">
-  </a></td> 
- 
-   <td WIDTH="25%"> 
-     <a href="https://ieeexplore.ieee.org/document/9403888/">
+      </a>
+      <small>Robust Implicit Networks via Non-Euclidean Contractions,
+      <em>NeurIPS,</em> 2021,
+      <a href="http://arxiv.org/abs/2106.03194.pdf">(pdf)</a></small>
+  </article>
+
+  <article class="representative-paper">
+      <a href="https://ieeexplore.ieee.org/document/9403888/">
        <img style='border:1px solid #000000' alt="SemiContraction" src="SemiContraction.jpg" height=200 border="1"> </a>
-   </td>
+      <small>Weak and Semi-Contractions for Network Systems and
+      Diffusively-Coupled Oscillators, <em>TAC,</em> 2021,
+      <a href="https://ieeexplore.ieee.org/document/9403888/">(pdf)</a></small>
+  </article>
 
-
-  <td WIDTH="25%">
-     <a href="https://epubs.siam.org/doi/10.1137/18M1242056">
+  <article class="representative-paper">
+      <a href="https://epubs.siam.org/doi/10.1137/18M1242056">
        <img style='border:1px solid #000000' alt="SIREV" src="SIREV.jpg" height=200 border="1"> </a>
-   </td>
-
-</tr>
-<tr>
-
-<td> <small>Efficient Interaction-aware Interval Analysis for Neural
-  Network Feedback Loops, <em> TAC,</em> 2024, <a
-href="https://ieeexplore.ieee.org/document/10578313">(pdf)</a>
-</small></td>
-
-<td> <small>Robust Implicit Networks via Non-Euclidean Contractions, <em> NeurIPS,</em> 2021, <a
-href="http://arxiv.org/abs/2106.03194.pdf">(pdf)</a>
-</small></td>
-
-<td> <small>Weak and Semi-Contractions for Network Systems and
-  Diffusively-Coupled Oscillators, <em> TAC,</em> 2021, <a
-href="https://ieeexplore.ieee.org/document/9403888/">(pdf)</a>
-</small></td>
-
-<td> <small>Flow and Elastic Networks on the n-Torus,<em> SIREV,</em> 2021, <a
-href="https://epubs.siam.org/doi/10.1137/18M1242056">(pdf)</a>
-</small></td>
-
-</tr>
-</table>
+      <small>Flow and Elastic Networks on the n-Torus, <em>SIREV,</em> 2021,
+      <a href="https://epubs.siam.org/doi/10.1137/18M1242056">(pdf)</a></small>
+  </article>
+</div>
 
 
 
