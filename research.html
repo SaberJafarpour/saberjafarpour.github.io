@@ -88,9 +88,34 @@ img {
   height: auto;
 }
 
-body > table {
+.research-row {
   width: 100%;
-  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(280px, 42%) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  margin: 0 0 2.5rem;
+}
+
+.research-copy {
+  min-width: 0;
+  text-align: justify;
+}
+
+.research-image-frame {
+  margin: 0;
+  padding: clamp(0.45rem, 1vw, 0.75rem);
+  overflow: hidden;
+  background: #eef1ec;
+  border: 1px solid #ccd3ca;
+  border-radius: 18px;
+  box-shadow: 0 5px 16px rgba(36, 40, 36, 0.12);
+}
+
+.research-image-frame img {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
 }
 
 @media (max-width: 760px) {
@@ -99,6 +124,10 @@ body > table {
     grid-template-columns: repeat(8, minmax(105px, 1fr));
     overflow-x: auto;
     font-size: 0.82rem;
+  }
+  .research-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 }
 </style>
@@ -126,8 +155,11 @@ body > table {
 
 <br><br>
 <br>
-<table style="width:100%" align="center">
-  <td style="width:50%" valign="top" align="justify">
+<section class="research-row">
+  <figure class="research-image-frame">
+    <img src="Research.png" alt="Overview of Saber Jafarpour's research">
+  </figure>
+  <div class="research-copy">
 <Font Size="4">
 My research is in the broad area of control theory and autonomy with
     focue on developing provable guarantees for safety, learning, and
@@ -142,21 +174,17 @@ My research is in the broad area of control theory and autonomy with
     optimization and machine learning algorithms and for safety
     assurance of modern autonomous systems. 
 </font>
-  </td>
-
-<td style="width:50%" align=left>
-<img src= "Research.png"
-align="Right"  Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="90%"
-width="90%">
-</td>
-
-  
-</table>
+  </div>
+</section>
 
 <br><br><br>
 
-<table style="width:100%" align="center"> <td style="width:50%"
-valign="top" align="justify"> <Font Size ="5"> <b>Safety Assurance for
+<section class="research-row">
+  <figure class="research-image-frame">
+    <img src="topic1.jpg" alt="Safety assurance for learning-enabled systems">
+  </figure>
+  <div class="research-copy">
+<Font Size ="5"> <b>Safety Assurance for
 Learning-enabled Systems</b> </font> <br><br> <Font Size="4"
 line-height="20px"> Machine learning components are increasingly being
 deployed in safety-critical autonomous systems, driven by the
@@ -169,16 +197,8 @@ safety of such autonomous systems from a reachability perspective. By
 leveraging state-of-the-art verification techniques for learning
 algorithms, we develop computationally efficient tools to estimate the
 reachable sets of learning-enabled systems.  </font>
-
-
-</td>
-<td style="width:50%" align="top">
-<img src="topic1.jpg"
-align="Right" Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="95%"
-width="95%">
-</td>
-
-</table>
+  </div>
+</section>
 
     <br>
 <b>Selected Publications:</b>
@@ -204,8 +224,12 @@ target = "_blank">IMMRAX: A Parallelizable and Differentiable Toolbox
 
   <br><br><br>
 
-<table style="width:100%" align="center"> <td style="width:50%"
-valign="top" align="justify"> <Font Size ="5"> <b>Verification and
+<section class="research-row">
+  <figure class="research-image-frame">
+    <img src="topic2.jpg" alt="Verification and control of stochastic systems">
+  </figure>
+  <div class="research-copy">
+<Font Size ="5"> <b>Verification and
 Control of Stochastic Systems</b> </font> <br><br> <Font Size="4"
 line-height="20px">Many real-world systems operate under uncertainties that are
   unbounded, unpredictable, and highly variable over time. For such
@@ -215,20 +239,9 @@ line-height="20px">Many real-world systems operate under uncertainties that are
   systems, the existing results in the literature fail to accurately
   capture the impact of stochastic noise on system dynamics. We
   develop a comprehensive theoretical and algorithmic framework that
-  separates the effect of between worst-case and stochastic uncertainties, offering statistically tight estimates of the reachable sets of stochastic systems. A key advantage of our framework is its adaptability to any verification and synthesis algorithm for deterministic systems.</font>
-
-
-
-
-
-</td>
-<td style="width:50%" align="top">
-<img src="topic2.jpg"
-align="Right" Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="95%"
-width="95%">
-</td>
-
-</table>
+separates the effect of between worst-case and stochastic uncertainties, offering statistically tight estimates of the reachable sets of stochastic systems. A key advantage of our framework is its adaptability to any verification and synthesis algorithm for deterministic systems.</font>
+  </div>
+</section>
 
 <br> <b>Selected Publications:</b> <br>
 <font Size="3">
@@ -252,8 +265,12 @@ width="95%">
 
 
 
-<table style="width:100%" align="center"> <td style="width:50%"
-  valign="top" align="justify"> <Font Size ="5"> <b>Guarantees for
+<section class="research-row">
+  <figure class="research-image-frame">
+    <img src="topic3.jpg" alt="Guarantees for algorithms via contraction theory">
+  </figure>
+  <div class="research-copy">
+  <Font Size ="5"> <b>Guarantees for
   Algorithms via Contraction Theory </b> </font> <br> <br> <Font
   Size="4" line-height="20px"> Many autonomous systems seamlessly
   integrate dynamical models with optimization and learning
@@ -272,10 +289,9 @@ width="95%">
 
 
 
-  </font> </td> <td
-  style="width:50%" align=left> <img src="topic3.jpg" align="Right"
-  Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo"
-  height="95%" width="95%"> </td> </table>
+  </font>
+  </div>
+</section>
 
     <br>
 <b>Selected Publications:</b>
@@ -305,8 +321,12 @@ target = "_blank"> Distributed and Time-varying Primal-dual Dynamics via
 
 <br><br>
 
-      <table style="width:100%" align="center"> <td style="width:50%"
-  valign="top" align="justify"> <Font Size ="5"> <b>Resilience of
+<section class="research-row">
+  <figure class="research-image-frame">
+    <img src="topic4.jpg" alt="Resilience of large-scale autonomous systems">
+  </figure>
+  <div class="research-copy">
+  <Font Size ="5"> <b>Resilience of
   Large-scale Autonomous Systems</b> </font> <br><br> <Font Size="4"
   line-height="20px"> Large-scale autonomous systems, such as
   multi-agent robotic systems and infrastructure networks, are
@@ -322,19 +342,8 @@ target = "_blank"> Distributed and Time-varying Primal-dual Dynamics via
   systems from a <i>network perspective</i> and develop
   computationally efficient methods to certify their safety and
   stability.  </font>
-
-
-
-
-    </td>
-<td style="width:50%" align=left >
-<img src="topic4.jpg"
-align="Right" Height=calc(50vh - 270px) width: calc(50vh - 600px) alt="My photo" height="90%"
-width="90%">
-</td>
-
-
-</table>
+  </div>
+</section>
 
     <br>
 <b>Selected Publications:</b>
