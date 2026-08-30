@@ -38,6 +38,23 @@ table, td, th, p, li, a, font {
   font-family: inherit;
 }
 
+font[size="3"],
+font[size="4"] {
+  font-size: 1em;
+  line-height: inherit;
+}
+
+font[size="5"] {
+  font-size: 1.25em;
+  line-height: 1.3;
+}
+
+ul,
+li {
+  font-size: 1em;
+  line-height: inherit;
+}
+
 a {
   color: #245b78;
   text-decoration: none;
@@ -100,6 +117,8 @@ img {
 .research-copy {
   min-width: 0;
   text-align: justify;
+  font-size: 1em;
+  line-height: 1.6;
 }
 
 .research-image-frame {
@@ -116,6 +135,42 @@ img {
   display: block;
   width: 100%;
   border-radius: 12px;
+}
+
+.lifting-row {
+  align-items: stretch;
+}
+
+.lifting-row .research-image-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.lifting-row .research-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.publication-distinction {
+  color: #b3261e;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.research-theme-title {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: inherit;
+  line-height: 1.3;
+}
+
+@media (max-width: 1050px) {
+  .research-theme-title {
+    white-space: normal;
+  }
 }
 
 @media (max-width: 760px) {
@@ -168,6 +223,14 @@ img {
     max-width: 520px;
     margin: 0 auto;
   }
+
+  .lifting-row .research-image-frame {
+    min-height: 0;
+  }
+
+  .lifting-row .research-image-frame img {
+    height: auto;
+  }
 }
 </style>
 </head>
@@ -215,6 +278,50 @@ My research is in the broad area of control theory and autonomy with
 </font>
   </div>
 </section>
+
+<br><br><br>
+
+<section class="research-row lifting-row">
+  <figure class="research-image-frame">
+    <img src="Lifting.png"
+         alt="Monotone lifting framework for data-driven safety verification and control">
+  </figure>
+  <div class="research-copy">
+    <Font Size="5"><b class="research-theme-title">Scalable Safety Certification from Data
+  via Monotone Lifting</b></font>
+    <br><br>
+    <Font Size="4" line-height="20px">
+      The growing deployment of autonomous systems in safety-critical environments has made rigorous safety guarantees a critical priority. Establishing such guarantees is particularly challenging when explicit models of the system dynamics are difficult or impossible to obtain and safety verification must instead rely on historical trajectories or simulator data. Existing data-driven safety-verification methods suffer from computational and sample complexity that grows rapidly with the system dimension. My research demonstrates that a fundamental structural property of dynamical systems&mdash;<em>monotonicity</em>&mdash;can substantially alleviate these challenges. I treat monotonicity not as a restrictive requirement on the original dynamics, but as a <em>canonical structural representation</em>, and develop the mathematical foundations for lifting general nonlinear systems into higher-dimensional monotone systems while preserving their relevant behaviors and safety properties. The order-preserving structure of these monotone liftings reduces global certificate conditions to checks at carefully selected boundary points, thereby alleviating the curse of dimensionality and substantially reducing the amount of data required for rigorous safety assurance.
+    </font>
+  </div>
+</section>
+
+<br>
+<b>Selected Publications:</b>
+<br>
+<font Size="3">
+  <ul>
+    <li>A. Alavi, M. Zamani, and S. Jafarpour,
+      <em>Scalable Neural Safety Certification via Monotonicity</em>,
+      2026, preprint.
+    </li>
+    <li>A. Alavi, A. Nadali, M. Zamani, and S. Jafarpour,
+      <a href="https://ieeexplore.ieee.org/abstract/document/11036788"
+         target="_blank" rel="noopener noreferrer">Neural Barrier Certificates for Monotone Systems,</a>
+      2025, <i>IEEE CSS Letters.</i>
+      <span class="publication-distinction">(Finalist for the Hybrid Systems Outstanding Student Paper Award)</span>
+    </li>
+    <li>A. Alavi, M. Zamani, and S. Jafarpour,
+      <em>Data-Driven Compositional Safety Verification of Interconnected Monotone Systems,</em>
+      2026, <i>IEEE CDC.</i>
+    </li>
+    <li>A. Makdesi, M. Zamani, and S. Jafarpour,
+      <a href="https://ifac.papercept.net/conferences/conferences/IFAC26/program/IFAC26_ContentListWeb_3.html"
+         target="_blank" rel="noopener noreferrer">Data-Driven Controlled Invariance via Monotone Embeddings,</a>
+      2026, <i>IFAC.</i>
+    </li>
+  </ul>
+</font>
 
 <br><br><br>
 
