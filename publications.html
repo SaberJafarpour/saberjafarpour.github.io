@@ -110,8 +110,8 @@ a:focus {
 .representative-papers {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 1.25rem;
 }
 
 .representative-paper {
@@ -121,8 +121,20 @@ a:focus {
 .representative-papers img {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
+  object-position: top;
+  background: #fff;
+  border: 1px solid #000;
+}
+
+.representative-papers img.neurips-paper-image {
+  object-fit: contain;
+}
+
+.representative-paper small {
+  display: block;
+  margin-top: 0.45rem;
 }
 
 .publication-intro {
@@ -200,8 +212,8 @@ a:focus {
   }
 
   .representative-papers img {
-    height: auto;
-    max-height: 240px;
+    height: min(58vw, 260px);
+    max-height: none;
   }
 
   .publication-list {
@@ -237,36 +249,72 @@ a:focus {
 
 <div class="representative-papers">
   <article class="representative-paper">
-      <a href="https://ieeexplore.ieee.org/document/10578313">
-       <img style='border:1px solid #000000' alt="neuralnetwork" src="neuralnet.png" height=200  border="1">
+      <a href="Scalable_Neural_Safety_Certification_via_Monotonicity_NeurIPS_2026.pdf"
+      target="_blank" rel="noopener noreferrer">
+       <img class="neurips-paper-image" alt="First page of Scalable Neural Safety Certification via Monotonicity"
+       src="neurips2026.png">
+      </a>
+      <small>Scalable Neural Safety Certification via Monotonicity,
+      <em>NeurIPS,</em> 2026,
+      <a href="Scalable_Neural_Safety_Certification_via_Monotonicity_NeurIPS_2026.pdf"
+      target="_blank" rel="noopener noreferrer">(pdf)</a></small>
+  </article>
+
+  <article class="representative-paper">
+      <a href="https://ieeexplore.ieee.org/document/10578313"
+      target="_blank" rel="noopener noreferrer">
+       <img alt="First page of Efficient Interaction-Aware Interval Analysis for Neural Network Feedback Loops"
+       src="neuralnet.png">
       </a>
       <small>Efficient Interaction-aware Interval Analysis for Neural
       Network Feedback Loops, <em>TAC,</em> 2024,
-      <a href="https://ieeexplore.ieee.org/document/10578313">(pdf)</a></small>
+      <a href="https://ieeexplore.ieee.org/document/10578313"
+      target="_blank" rel="noopener noreferrer">(pdf)</a></small>
   </article>
 
   <article class="representative-paper">
-      <a href="https://arxiv.org/abs/2106.03194">
-       <img style='border:1px solid #000000' alt="NeurIPS" src="NeurIPS.jpg" height=200  border="1">
+      <a href="https://arxiv.org/abs/2106.03194" target="_blank"
+      rel="noopener noreferrer">
+       <img class="neurips-paper-image" alt="First page of Robust Implicit Networks via Non-Euclidean Contractions"
+       src="NeurIPS.jpg">
       </a>
       <small>Robust Implicit Networks via Non-Euclidean Contractions,
       <em>NeurIPS,</em> 2021,
-      <a href="http://arxiv.org/abs/2106.03194.pdf">(pdf)</a></small>
+      <a href="https://arxiv.org/pdf/2106.03194" target="_blank"
+      rel="noopener noreferrer">(pdf)</a></small>
   </article>
 
   <article class="representative-paper">
-      <a href="https://ieeexplore.ieee.org/document/9403888/">
-       <img style='border:1px solid #000000' alt="SemiContraction" src="SemiContraction.jpg" height=200 border="1"> </a>
+      <a href="https://ieeexplore.ieee.org/document/11036788" target="_blank"
+      rel="noopener noreferrer">
+       <img alt="First page of Neural Barrier Certificates for Monotone Systems"
+       src="lcss2025.png">
+      </a>
+      <small>Neural Barrier Certificates for Monotone Systems,
+      <em>IEEE L-CSS,</em> 2025,
+      <a href="https://ieeexplore.ieee.org/document/11036788" target="_blank"
+      rel="noopener noreferrer">(pdf)</a></small>
+  </article>
+
+  <article class="representative-paper">
+      <a href="https://ieeexplore.ieee.org/document/9403888/" target="_blank"
+      rel="noopener noreferrer">
+       <img alt="First page of Weak and Semi-Contractions for Network Systems and Diffusively-Coupled Oscillators"
+       src="SemiContraction.jpg"> </a>
       <small>Weak and Semi-Contractions for Network Systems and
       Diffusively-Coupled Oscillators, <em>TAC,</em> 2021,
-      <a href="https://ieeexplore.ieee.org/document/9403888/">(pdf)</a></small>
+      <a href="https://ieeexplore.ieee.org/document/9403888/" target="_blank"
+      rel="noopener noreferrer">(pdf)</a></small>
   </article>
 
   <article class="representative-paper">
-      <a href="https://epubs.siam.org/doi/10.1137/18M1242056">
-       <img style='border:1px solid #000000' alt="SIREV" src="SIREV.jpg" height=200 border="1"> </a>
+      <a href="https://epubs.siam.org/doi/10.1137/18M1242056" target="_blank"
+      rel="noopener noreferrer">
+       <img alt="First page of Flow and Elastic Networks on the n-Torus"
+       src="SIREV.jpg"> </a>
       <small>Flow and Elastic Networks on the n-Torus, <em>SIREV,</em> 2021,
-      <a href="https://epubs.siam.org/doi/10.1137/18M1242056">(pdf)</a></small>
+      <a href="https://epubs.siam.org/doi/10.1137/18M1242056" target="_blank"
+      rel="noopener noreferrer">(pdf)</a></small>
   </article>
 </div>
 
@@ -371,8 +419,8 @@ a:focus {
     <ol class="publication-list" reversed>
 
       <li>A. Alavi, M. Zamani, and S. Jafarpour,
-      <b>Scalable Neural Safety Certification via Monotonicity,</b>
-      <i>Submitted,</i> May 2026.
+      <b>Data-Driven Finite-Visitation Certificates for Monotone Systems,</b>
+      <i>Submitted.</i> Oct 2026
 
       <li>F. Mafi, S. Jafarpour, and M. Pirani,
       <b>A Separation Principle for Adversarial Attacks and Defense of Graph
@@ -396,6 +444,13 @@ a:focus {
     
 <h3>Journal/CS-Conference Papers</h3>
     <ol class="publication-list" reversed>
+
+      <li>A. Alavi, M. Zamani, and S. Jafarpour,
+      <b>Scalable Neural Safety Certification via Monotonicity,</b>
+      <i>Advances in Neural Information Processing Systems (NeurIPS)</i>,
+      to appear, 2026.
+      [<a href="Scalable_Neural_Safety_Certification_via_Monotonicity_NeurIPS_2026.pdf"
+      target="_blank" rel="noopener noreferrer">PDF</a>]
 
       <li>Z. Liu, S. Jafarpour, and Y. Chen,
       <b>Safety Verification of Nonlinear Stochastic Systems via
